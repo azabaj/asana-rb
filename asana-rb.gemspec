@@ -1,15 +1,15 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'asana/rb/version'
+require 'asana/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "asana-rb"
-  spec.version       = Asana::Rb::VERSION
+  spec.version       = Asana::VERSION
   spec.authors       = ["azabaj"]
   spec.email         = ["feketeferenc@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Asana oAuth API wrapper}
+  spec.description   = %q{Asana oAuth API wrapper, uses access_token to retrieve resources insted of API key.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -20,4 +20,8 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "rspec"
+  spec.add_development_dependency "rspec-nc"
+  spec.add_development_dependency "guard"
+  spec.add_development_dependency "guard-rspec"
 end
